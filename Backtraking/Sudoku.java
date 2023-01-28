@@ -17,9 +17,12 @@ class Sudoku {
         int startRow = (row / 3) * 3;
         int startCol = (col / 3) * 3;
 
-        for (int i = startRow, j = startCol; i < startRow + 3 && j < startCol + 3; i++, j++) {
-            if (sudoku[i][j] == digit) {
-                return false;
+        for (int i = startRow; i < startRow + 3; i++) {
+            for (int j = startCol; j < startCol + 3; j++) {
+
+                if (sudoku[i][j] == digit) {
+                    return false;
+                }
             }
         }
         return true;
