@@ -3,7 +3,7 @@ package Functions;
 import java.util.Scanner;
 
 public class DecimalToBinary {
-    public static int DecimalToBinary(int num){
+    public static int decimalToBinary(int num){
         int bin = 0;
         int pow = 0;
 
@@ -17,11 +17,11 @@ public class DecimalToBinary {
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("Enter number ");
+            int number = sc.nextInt();
 
-        System.out.print("Enter number ");
-        int number = sc.nextInt();
-
-        System.out.println(DecimalToBinary(number));
+            System.out.println(decimalToBinary(number));
+        }
     }
 }

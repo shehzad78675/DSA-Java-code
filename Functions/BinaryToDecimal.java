@@ -17,10 +17,11 @@ public class BinaryToDecimal {
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter number ");
-        int number = sc.nextInt();
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("Enter number ");
+            int number = sc.nextInt();
 
-        System.out.println(binaryToDecimal(number));
+            System.out.println(binaryToDecimal(number));
+        }
     }
 }

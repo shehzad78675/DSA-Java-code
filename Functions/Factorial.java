@@ -16,11 +16,11 @@ public class Factorial{
         return ans;
     }
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("Enter number ");
+            int number = sc.nextInt();
 
-        System.out.print("Enter number ");
-        int number = sc.nextInt();
-
-        System.out.println(factorial(number));
+            System.out.println(factorial(number));
+        }
     }
 }

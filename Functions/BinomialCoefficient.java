@@ -20,14 +20,14 @@ public class BinomialCoefficient {
         return factorial(n)/(factorial(r)*factorial(n-r));
     }
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("Enter n ");
+            int n = sc.nextInt();
 
-        System.out.print("Enter n ");
-        int n = sc.nextInt();
+            System.out.print("Enter r ");
+            int r = sc.nextInt();
 
-        System.out.print("Enter r ");
-        int r = sc.nextInt();
-
-        System.out.println(binomialCoefficient(n, r));
+            System.out.println(binomialCoefficient(n, r));
+        }
     }
 }
